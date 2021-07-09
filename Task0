@@ -1,0 +1,16 @@
+import random
+
+random_list = [random.randrange(-100,100) for i in range(30)]
+print("\nЛист => ", random_list)
+max_element = max(random_list)
+position = random_list.index(max_element)
+print("\nМакс елемент рядка => ", max_element, "\nНомер позиции в строке => ", position + 1)
+new_list=[]
+for element in random_list:
+    if (element % 2) == 1:
+        new_list.append(element)
+if len(new_list) == 0:
+  print("\nВ списке нет нечетн номеров")
+else:
+  new_list.sort(reverse=True)
+  print("\nНовый лист =>", new_list)
